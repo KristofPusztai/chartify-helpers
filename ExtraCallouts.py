@@ -17,7 +17,7 @@ def circular_callouts(chart, x, y, labels, colors, legend=True, label_text=False
     else:
         sizes = np.full(len(x), 10)
     # Adding callouts to plot
-    for points in range(len(x)):
+    for i in range(len(x)):
         label = None
         if legend:
             label = labels[i]
@@ -29,3 +29,4 @@ def circular_callouts(chart, x, y, labels, colors, legend=True, label_text=False
 
 def square_callouts(chart, x, y, labels, colors, legend=None, label_text=None):
     #TODO
+    pass
