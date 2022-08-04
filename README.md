@@ -23,6 +23,9 @@ sudo python setup.py install
 ### stacked bar chart labels:
 
 ```python
+import chartify
+from ExtraCallouts import custom_callouts
+
 # Generate example data
 data = chartify.examples.example_data()
 
