@@ -55,4 +55,5 @@ custom_callouts(ch, ch.figure.square,
                 legend=True, label_text=True, sizes=[10],alphas=[1], text_offset=0.3)
 ch.show('png')
 ```
+ ![alt text](https://github.com/KristofPusztai/chartify-helpers/blob/main/custom_callouts.png)
 
