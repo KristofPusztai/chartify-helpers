@@ -3,3 +3,5 @@
 *.html
 __pycache*
 .ipynb_checkpoints
+\#*
+.#*
