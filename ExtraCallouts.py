@@ -3,30 +3,32 @@
 import chartify
 import numpy as np
 
-def circular_callouts(chart, x, y, labels, colors, legend=True, label_text=False, sizes=None,
+def custom_callouts(chart, custom_callout, xs, ys, labels, colors, legend=True, label_text=False, sizes=None,
                       alphas=None, text_offset=0.0005):
-    assert len(x) == len(y), 'x and y lengths must be the same'
-    assert len(x) == len(labels), 'length of data categories and labels must be the same'
-    assert len(x) == len(colors), 'length of data categories and colors must be the same'
+    assert len(xs) == len(ys), 'x and y lengths must be the same'
+    assert len(xs) == len(labels), 'length of data categories and labels must be the same'
+    assert len(xs) == len(colors), 'length of data categories and colors must be the same'
     if alphas:
-        assert len(alphas) == len(x), 'length of alphas must be the same as data'
+        assert len(alphas) == len(xs), 'length of alphas must be the same as data'
     else:
-        alphas = np.full(len(x), 1)
+        alphas = np.full(len(xs), 1)
     if sizes:
-         assert len(sizes) == len(x), 'length of sizes must be the same as data'
+         assert len(sizes) == len(xs), 'length of sizes must be the same as data'
     else:
-        sizes = np.full(len(x), 10)
+        sizes = np.full(len(xs), 10)
     # Adding callouts to plot
-    for i in range(len(x)):
+    for i in range(len(xs)):
         label = None
         if legend:
             label = labels[i]
-        elif label_text:
-            chart.callout.text(labels[i], x[i], y[i] + text_offset*sizes[i]*y[i])
-        chart.figure.circle(x[i] , y[i], size=sizes[i], color=colors[i],
-                            alpha=alphas[i], legend_label=label)
-
-
-def square_callouts(chart, x, y, labels, colors, legend=None, label_text=None):
-    #TODO
-    pass
+        if len(np.shape(xs)) == 2:
+            for j, x in enumerate(xs[i]):
+                if label_text:
+                    chart.callout.text(labels[i], x, ys[i][j] + text_offset)
+                custom_callout(x , ys[i][j], size=sizes[i], color=colors[i],
+                                    alpha=alphas[i], legend_label=label)
+        else:
+            if label_text:
+                chart.callout.text(labels[i], x, ys[i] + text_offset, text_font='helvetica')
+            custom_callout(x , ys[i], size=sizes[i], color=colors[i],
+                                    alpha=alphas[i], legend_label=label)
