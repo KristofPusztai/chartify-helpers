@@ -27,8 +27,8 @@ Method:
 
 ```python
 custom_callouts(chart, custom_callout, xs, ys, 
-	            labels, colors, legend=True, label_text=False,
-				sizes=None, alphas=None, text_offset=0.0005)
+	        labels, colors, legend=True, label_text=False,
+		sizes=None, alphas=None, text_offset=0.0005)
 ```
 
 ```python
