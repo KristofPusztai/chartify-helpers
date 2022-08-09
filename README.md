@@ -20,7 +20,8 @@ navigate to cloned directory and run setup.py
 sudo python setup.py install
 ```
 ## Usage:
-### stacked bar chart labels:
+
+### Custom Callouts:
 
 ```python
 import chartify
@@ -63,6 +64,8 @@ custom_callouts(ch, ch.figure.square,
  ![alt text](https://github.com/KristofPusztai/chartify-helpers/blob/main/custom_callouts.png)
  
  More callout styles found [here](https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html)
+ 
+### Stacked Bar Chart Top Labels:
 
 ```
 # Generate example data
@@ -89,3 +92,4 @@ add_stacked_label(ch,data.groupby('fruit').sum()['quantity'].index, data.groupby
 
 ch.show('png')
 ```
+ ![alt text](https://github.com/KristofPusztai/chartify-helpers/blob/main/stackedbar_label.png)
