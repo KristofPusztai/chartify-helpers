@@ -23,6 +23,14 @@ sudo python setup.py install
 
 ### Custom Callouts:
 
+Method:
+
+```python
+custom_callouts(chart, custom_callout, xs, ys, 
+	            labels, colors, legend=True, label_text=False,
+				sizes=None, alphas=None, text_offset=0.0005)
+```
+
 ```python
 import chartify
 from ExtraCallouts import custom_callouts
@@ -67,7 +75,13 @@ custom_callouts(ch, ch.figure.square,
  
 ### Stacked Bar Chart Top Labels:
 
+Method:
+
+```python
+add_stacked_label(chart, categories, labels, y , colors=None, sizes='10pt')
 ```
+
+```python
 # Generate example data
 data = chartify.examples.example_data()
 
@@ -88,7 +102,9 @@ ch.plot.bar_stacked(
 ch.set_legend_location('top_right')
 
 # Adding numerical labels above each bar
-add_stacked_label(ch,data.groupby('fruit').sum()['quantity'].index, data.groupby('fruit').sum()['quantity'].values, data.groupby('fruit').sum()['quantity'].values)
+add_stacked_label(ch,data.groupby('fruit').sum()['quantity'].index,
+data.groupby('fruit').sum()['quantity'].values, 
+data.groupby('fruit').sum()['quantity'].values)
 
 ch.show('png')
 ```
