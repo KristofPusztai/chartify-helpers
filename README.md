@@ -68,7 +68,7 @@ custom_callouts(ch, ch.figure.square,
                 ['square callout'], ['red'], 
                 legend=True, label_text=True, sizes=[10],alphas=[1], text_offset=0.3)
 ```
- ![alt text](https://github.com/KristofPusztai/chartify-helpers/blob/main/custom_callouts.png)
+ ![alt text](https://github.com/KristofPusztai/chartify-helpers/blob/main/custom_callouts.png?raw=True)
  
  More callout styles found [here](https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html)
  
@@ -109,4 +109,4 @@ data.groupby('fruit').sum()['quantity'].values)
 
 ch.show('png')
 ```
- ![alt text](https://github.com/KristofPusztai/chartify-helpers/blob/main/stackedbar_label.png)
+ ![alt text](https://github.com/KristofPusztai/chartify-helpers/blob/main/stackedbar_label.png?raw=True)

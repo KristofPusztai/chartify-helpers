@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="chartify_helpers",
-    version="1.2.1", # MAJOR.MINOR.MAINTENANCE
+    version="1.2.2", # MAJOR.MINOR.MAINTENANCE
     author="Kristof Pusztai",
     author_email="kpusztai@berkeley.edu",
     description="Some lightweight helper functions which add readability/functionality to Spotify's chartify library",
