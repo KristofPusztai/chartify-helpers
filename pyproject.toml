@@ -3,11 +3,11 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "chartify_helpers"
-version = "1.2.0"
+version = "1.2.1"
 authors = [
   { name="Kristof Pusztai", email="kpusztai@berkeley.edu" },
 ]
-description = "A small example package"
+description = "Some lightweight helper functions which add readability/functionality to Spotify's chartify library"
 readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.9"

@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: chartify-helpers
-Version: 1.2.0
-Summary: A small example package
+Version: 1.2.1
+Summary: Some lightweight helper functions which add readability/functionality to Spotify's chartify library
 Home-page: https://github.com/KristofPusztai/chartify-helpers
 Author: Kristof Pusztai
 Author-email: Kristof Pusztai <kpusztai@berkeley.edu>
