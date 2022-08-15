@@ -11,7 +11,7 @@ pip install chartify-helpers
 via github:
 
 ```
-git clone
+git clone https://github.com/KristofPusztai/chartify-helpers.git
 ```
 
 navigate to cloned directory and run setup.py
@@ -32,8 +32,7 @@ custom_callouts(chart, custom_callout, xs, ys,
 ```
 
 ```python
-import chartify
-from ExtraCallouts import custom_callouts
+from chartify_helpers import custom_callouts
 
 # Generate example data
 data = chartify.examples.example_data()
@@ -82,6 +81,8 @@ add_stacked_label(chart, categories, labels, y , colors=None, sizes='10pt')
 ```
 
 ```python
+from chartify_helpers import add_stacked_label
+
 # Generate example data
 data = chartify.examples.example_data()
 
