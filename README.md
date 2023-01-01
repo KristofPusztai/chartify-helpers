@@ -1,3 +1,6 @@
+![version](https://img.shields.io/pypi/v/chartify-helpers?logo=spotify)
+![license](https://img.shields.io/pypi/l/chartify-helpers?logo=spotify)
+![GitHub issues](https://img.shields.io/github/issues/KristofPusztai/chartify-helpers?logo=spotify)
 # chartify-helpers
 Some lightweight helper functions which add readability/functionality to Spotify's [chartify](https://github.com/spotify/chartify) library
 
